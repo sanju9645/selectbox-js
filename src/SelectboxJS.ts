@@ -2,6 +2,7 @@ import { loadExternalResources, addDynamicStyles } from './loadResources.js';
 import { initializeDefaultOption } from './helpers.js';
 import { generateDropdownHtml } from './dropdown.js';
 import { DropdownItem, DropdownOptions as BaseDropdownOptions } from './dropdown';
+import { Styleblast } from './Styleblast.js';
 
 type DropdownOptions = BaseDropdownOptions & {
   iconPackCDN?: string;
@@ -16,6 +17,10 @@ type DropdownOptions = BaseDropdownOptions & {
 };
 
 class SelectboxJS {
+  constructor() {
+    Styleblast();
+  }
+
   render(containerId: string, items: DropdownItem[], options: DropdownOptions = {}): void {
     const containerElement = document.getElementById(containerId);
     if (!containerElement) {
