@@ -1,0 +1,29 @@
+{
+  "name": "selectbox",
+  "version": "1.0.0",
+  "description": "A sleek, adaptable dropdown solution for building web applications.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sanju9645/selectbox-js.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sanju9645/selectbox-js/issues"
+  },
+  "homepage": "https://github.com/sanju9645/selectbox-js#readme",
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "rollup-plugin-dts": "^6.1.1",
+    "typescript": "^5.7.2",
+    "vite": "^6.0.6"
+  },
+  "dependencies": {
+    "boxicons": "^2.1.4"
+  }
+}
