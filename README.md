@@ -230,7 +230,7 @@ const options = {
 ## 🌟 Demo
 
 Check out the live demo of **SelectboxJS**:  
-👉 [https://sanju9645.github.io/selectbox-js](https://sanju9645.github.io/selectbox-js)
+👉 [Open](https://sanju9645.github.io/selectbox-js)
 
 
 ## 🤝 Contributing
