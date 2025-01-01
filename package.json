@@ -1,6 +1,6 @@
 {
   "name": "selectbox-js",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A sleek, adaptable dropdown solution for building web applications.",
   "main": "dist/selectbox-js.cjs.js",
   "module": "dist/selectbox-js.es.js",
