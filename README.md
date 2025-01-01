@@ -159,25 +159,25 @@ As the name suggests, this is optional. The `options` is an object that contains
 
 ### 🎛️ Options Reference
 
-| Option | Type | Default | Description |
-|--------|------|---------|-------------|
-| `iconPackCDN` | `string` | - | CDN URL for icon package |
-| `customFontLibraryURL` | `string` | - | Custom font library URL |
-| `fontFamily` | `string` | `system-ui` | Font family for dropdown |
-| `dropdownMinWidth` | `string` | `200px` | Minimum dropdown width |
-| `dropdownMaxWidth` | `string` | `500px` | Maximum dropdown width |
-| `dropdownOptionBackground` | `string` | `#fff` | Option background color |
-| `dropdownOptionHoverBackground` | `string` | `#F2F2F2` | Hover state background |
-| `selectedOptionBgColor` | `string` | `#F2F2F2` | Selected option background |
-| `dropdownFontSize` | `string` | `15px` | Font size for options |
-| `customCSSStyles` | `string` | - | Custom CSS styles |
-| `commonOnClick` | `function` | - | Global click handler |
+| Option | Type | Required | Default | Description |
+|--------|------|----------|---------|-------------|
+| `iconPackCDN` | `string` | ❌ | - | The CDN URL of the icon pack to be used in the dropdown |
+| `customFontLibraryURL` | `string` | ❌ | - | The URL of the custom font library to be used in the dropdown |
+| `fontFamily` | `string` | ❌ | `system-ui` | The font family to be used in the dropdown. |
+| `dropdownMinWidth` | `string` | ❌ | `200px` | Minimum dropdown width |
+| `dropdownMaxWidth` | `string` | ❌ | `500px` | Maximum dropdown width |
+| `dropdownOptionBackground` | `string` | ❌ | `#fff` | Option background color |
+| `dropdownOptionHoverBackground` | `string` | ❌ | `#F2F2F2` | The background color of the dropdown options when hovered. |
+| `selectedOptionBgColor` | `string` | ❌ | `#F2F2F2` | Selected option background |
+| `dropdownFontSize` | `string` | ❌ | `15px` | Font size for options |
+| `customCSSStyles` | `string` | ❌ | - | Custom CSS styles |
+| `commonOnClick` | `function` | ❌ | - | The function to be called when a dropdown option is clicked. If you need to perform an action for all options, use this property. |
 
 ## 🎨 Styling Examples
 
 ### Custom Theme
 ```javascript
-const customOptions = {
+const options = {
   dropdownOptionBackground: '#2C3E50',
   dropdownOptionHoverBackground: '#34495E',
   selectedOptionBgColor: '#34495E',
