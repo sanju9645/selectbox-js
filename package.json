@@ -8,13 +8,13 @@
     "dev": "vite",
     "build": "vite build",
     "serve": "vite preview",
-    "prepare": "npm run build" 
+    "prepare": "npm run build"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/sanju9645/selectbox-js.git"
   },
-  "author": "",
+  "author": "Osprey",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/sanju9645/selectbox-js/issues"
@@ -25,9 +25,6 @@
     "rollup-plugin-dts": "^6.1.1",
     "typescript": "^5.7.2",
     "vite": "^6.0.6"
-  },
-  "dependencies": {
-    "boxicons": "^2.1.4"
   },
   "files": [
     "dist/**/*",
@@ -40,5 +37,9 @@
     },
     "./package.json": "./package.json"
   },
-  "keywords": ["vite", "typescript", "package"]
+  "keywords": [
+    "vite",
+    "typescript",
+    "package"
+  ]
 }

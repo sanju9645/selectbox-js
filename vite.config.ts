@@ -14,8 +14,6 @@ export default defineConfig({
       fileName: (format) => `selectbox-js.${format}.js`,
       formats: ['es', 'cjs', 'umd']
     },
-    rollupOptions: {
-      external: ['boxicons'],
-    }
+    rollupOptions: {}
   }
 });
