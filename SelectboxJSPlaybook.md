@@ -151,6 +151,10 @@ npm run build
 Include the following code in the index.html file to test the library:
 ```
   <script type="module">
+    // import { SelectboxJS } from 'https://cdn.jsdelivr.net/npm/selectbox-js/dist/selectbox-js.es.js';
+    // import { SelectboxJS } from 'selectbox-js';
+    // const { SelectboxJS } = require('selectbox-js');
+    // import { SelectboxJS } from './node_modules/selectbox-js/dist/selectbox-js.es.js';
     import { SelectboxJS } from '../dist/selectbox-js.es.js';
 
     document.addEventListener('DOMContentLoaded', () => {
@@ -220,6 +224,8 @@ npm version patch
 8.1 Log In to NPM:
 ```
 npm login
+
+npm whoami
 ```
 
 8.2 Publish
