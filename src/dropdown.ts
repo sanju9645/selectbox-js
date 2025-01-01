@@ -12,20 +12,20 @@ export type DropdownOptions = {
   commonOnClick?: () => void;
 };
 
-const generateDefaultDropdownItem = (identifier: string, items: DropdownItem[]): HTMLDivElement => {
+const generateDefaultDropdownItem = (identifier: string, dropdownLabelItem: DropdownItem, items: DropdownItem[]): HTMLDivElement => {
   const selectBtnDiv = document.createElement('div');
   selectBtnDiv.className = 'selectbox-js-select-btn';
   selectBtnDiv.id = `selectbox-js-select-btn-${identifier}`;
 
   const defaultIcon = document.createElement('i');
   defaultIcon.id = `selectbox-js-select-option-text-default-icon-${identifier}`;
-  defaultIcon.style.color = items[0]?.iconColor || '';
-  defaultIcon.className = items[0]?.icon || '';
+  defaultIcon.className = dropdownLabelItem?.icon || ''; 
+  defaultIcon.style.color = dropdownLabelItem?.iconColor || '';
   
   const defaultTextSpan = document.createElement('span');
   defaultTextSpan.className = 'selectbox-js-select-option-text-default';
   defaultTextSpan.id = `selectbox-js-select-option-text-default-${identifier}`;
-  defaultTextSpan.textContent = items[0].text;
+  defaultTextSpan.textContent = dropdownLabelItem?.text || 'Select an Item';
 
   const chevronIcon = document.createElement('i');
   chevronIcon.className = 'bx bx-chevron-down';
@@ -40,6 +40,7 @@ const generateDefaultDropdownItem = (identifier: string, items: DropdownItem[]):
 const generateDropdownLi = (
   identifier: string,
   item: DropdownItem,
+  dropdownLabelItem: DropdownItem,
   options: DropdownOptions = {}
 ): HTMLLIElement => {
   const optionLi = document.createElement('li');
@@ -56,6 +57,9 @@ const generateDropdownLi = (
   optionTextSpan.id = `selectbox-js-select-option-text-${identifier}`;
   optionTextSpan.textContent = item.text;
 
+  if (item.text === dropdownLabelItem.text) {
+    optionLi.classList.add("selected");
+  }
   optionLi.appendChild(optionIcon);
   optionLi.appendChild(optionTextSpan);
 
@@ -64,6 +68,7 @@ const generateDropdownLi = (
 
 const generateDropdownHtml = (
   identifier: string,
+  dropdownLabelItem: DropdownItem,
   items: DropdownItem[],
   options: DropdownOptions = {}
 ): HTMLDivElement => {
@@ -71,13 +76,13 @@ const generateDropdownHtml = (
   selectMenuDiv.className = 'selectbox-js-select-menu';
   selectMenuDiv.id = `selectbox-js-select-menu-${identifier}`;
   
-  const selectBtnDiv = generateDefaultDropdownItem(identifier, items);
+  const selectBtnDiv = generateDefaultDropdownItem(identifier, dropdownLabelItem, items);
   const optionsUl = document.createElement('ul');
   optionsUl.className = 'selectbox-js-select-menu-options';
   optionsUl.id = `selectbox-js-select-menu-options-${identifier}`;
 
   items.forEach(item => {
-    const optionLi = generateDropdownLi(identifier, item, options);
+    const optionLi = generateDropdownLi(identifier, item, dropdownLabelItem, options);
     optionsUl.appendChild(optionLi);
   });
 

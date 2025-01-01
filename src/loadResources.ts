@@ -8,6 +8,7 @@ type ResourceOptions = {
   dropdownOptionBackground?: string;
   dropdownFontSize?: string;
   customCSSStyles?: string;
+  selectedOptionBgColor?: string;
 };
 
 const loadExternalResources = (options: ResourceOptions): void => {
@@ -74,6 +75,10 @@ const addDynamicStyles = (options: ResourceOptions): void => {
 
     .selectbox-js-select-menu {
       font-size: ${options.dropdownFontSize || '15px'} !important;
+    }
+    
+    .selectbox-js-select-menu-option.selected {
+      background: ${options?.selectedOptionBgColor ? options.selectedOptionBgColor : '#F2F2F2'} !important;
     }
   `);
 

@@ -21,13 +21,13 @@ class SelectboxJS {
     Styleblast();
   }
 
-  render(containerId: string, items: DropdownItem[], options: DropdownOptions = {}): void {
+  render(containerId: string, dropdownLabelItem: DropdownItem, items: DropdownItem[], options: DropdownOptions = {}): void {
     const containerElement = document.getElementById(containerId);
     if (!containerElement) {
       throw new Error(`Container with ID "${containerId}" not found.`);
     }
 
-    const selectMenu = generateDropdownHtml(containerId, items, options);
+    const selectMenu = generateDropdownHtml(containerId, dropdownLabelItem,items, options);
     containerElement.appendChild(selectMenu);
 
     const optionMenu = document.getElementById(`selectbox-js-select-menu-${containerId}`);

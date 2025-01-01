@@ -16,6 +16,18 @@ const initializeDefaultOption = (identifier: string, item: DropdownItem): void =
   }
 };
 
+const handleSeletedOptionBgColor = (identifier: string, item: DropdownItem) => {
+  const selectedOptionElements = document.querySelectorAll('.selectbox-js-select-menu-option');
+  selectedOptionElements.forEach(element => {
+    element.classList.remove('selected');
+  });
+  const selectedOption = document.getElementById(`select-option-${item.id}-${identifier}`);
+  
+  if (selectedOption) {
+    selectedOption.classList.add("selected");
+  }
+} 
+
 const handleOptionClick = (
   identifier: string, 
   item: DropdownItem, 
@@ -27,11 +39,12 @@ const handleOptionClick = (
   const selectedOptionElement = document.getElementById(`select-option-${item.id}-${identifier}`);
 
   if (selectedOpt && selectedOptIcon && selectedOptionElement && optionMenu) {
-    const selectedOption = selectedOptionElement.innerText;
-    selectedOpt.innerText = selectedOption;
+    const selectedOptionTxt = selectedOptionElement.innerText;
+    selectedOpt.innerText = selectedOptionTxt;
     selectedOptIcon.className = item?.icon || '';
     selectedOptIcon.style.color = item.iconColor || '';
     optionMenu.classList.remove("active");
+    handleSeletedOptionBgColor(identifier, item);
 
     if (typeof item.onClick === 'function') {
       item.onClick();
