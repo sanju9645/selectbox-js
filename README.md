@@ -227,6 +227,12 @@ const options = {
   </body>
 ```
 
+## 🌟 Demo
+
+Check out the live demo of **SelectboxJS**:  
+👉 [https://sanju9645.github.io/selectbox-js](https://sanju9645.github.io/selectbox-js)
+
+
 ## 🤝 Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request.
