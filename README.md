@@ -144,18 +144,6 @@ Each item in the dropdown can have these properties:
 
 #### `options`
 As the name suggests, this is optional. The `options` is an object that contains the configuration for the dropdown. It can have the following properties:
-- `iconPackCDN`: The CDN URL of the icon pack to be used in the dropdown.
-- `customFontLibraryURL`: The URL of the custom font library to be used in the dropdown.
-- `fontFamily`: The font family to be used in the dropdown.
-- `dropdownMinWidth`: The minimum width of the dropdown.
-- `dropdownMaxWidth`: The maximum width of the dropdown.
-- `dropdownOptionBackground`: The background color of the dropdown options.
-- `dropdownOptionHoverBackground`: The background color of the dropdown options when hovered.
-- `selectedOptionBgColor`: The background color of the selected option.
-- `dropdownFontSize`: The font size of the dropdown options.
-- `customCSSStyles`: The custom CSS styles to be applied to the dropdown.
-- `commonOnClick`: The function to be called when a dropdown option is clicked. If you need to perform an action for all options, use this property.
-
 
 ### 🎛️ Options Reference
 
