@@ -127,14 +127,7 @@ It can also have the following additional properties:
 - `iconColor`: The color of the icon.
 
 #### `items`
-The `items` is an array of objects. Each object should have the following properties:
-- `id`: The unique identifier of the item.
-- `text`: The text to be displayed as the label of the dropdown.
-- `icon`: The icon to be displayed as the label of the dropdown.
-- `iconColor`: The color of the icon.
-- `onClick`: The function to be called when the item is clicked. If you need to perform an action for a specific option, use this property.
-
-`Items` are the options that will be displayed in the dropdown.
+`Items` (is an array of objects) are the options that will be displayed in the dropdown.
 
 ### 🎯 Item Properties
 
@@ -142,11 +135,11 @@ Each item in the dropdown can have these properties:
 
 | Property | Type | Required | Description |
 |----------|------|----------|-------------|
-| `id` | `string` | ✅ | Unique identifier |
-| `text` | `string` | ✅ | Display text |
-| `icon` | `string` | ❌ | Icon class name |
+| `id` | `string` | ✅ | Unique identifier, The unique identifier of the item |
+| `text` | `string` | ✅ | Display text, The text to be displayed as the label of the dropdown. |
+| `icon` | `string` | ❌ | Icon class name, The icon to be displayed as the label of the dropdown. |
 | `iconColor` | `string` | ❌ | Icon color |
-| `onClick` | `function` | ❌ | Click handler |
+| `onClick` | `function` | ❌ | Click handler, The function to be called when the item is clicked. If you need to perform an action for a specific option, use this property. |
 
 
 #### `options`
